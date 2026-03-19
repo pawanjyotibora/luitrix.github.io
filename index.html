@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Luitrix | Modern Marketing Agency</title>
+<meta content="Luitrix is a marketing company offering influencer marketing, performance marketing, and website development services for growth-focused brands." name="description">
 <!-- BEGIN: Tailwind CSS Configuration -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
@@ -57,14 +58,26 @@
 <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center font-bold text-white" style="">L</div>
 <span class="text-2xl font-bold tracking-tight" style="">LUITRIX</span>
 </div>
+<nav aria-label="Primary navigation" class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+<a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#services">Services</a>
+<a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#about">About</a>
+<a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#contact">Contact</a>
+</nav>
 <div class="hidden md:block">
 <span class="text-sm font-medium uppercase tracking-widest text-brand-muted" style="">Strategic Marketing Solutions</span>
 </div>
 </header>
+<nav aria-label="Mobile navigation" class="max-w-7xl w-full mx-auto px-6 pb-2 md:hidden">
+<ul class="flex items-center gap-4 text-sm font-medium text-slate-300">
+<li><a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-brand-accent focus:outline focus:outline-2 focus:outline-brand-accent focus:outline-offset-2 rounded-sm transition-colors" href="#contact">Contact</a></li>
+</ul>
+</nav>
 <!-- END: Navigation -->
 <!-- BEGIN: Main Content Section -->
-<main class="flex-grow flex items-center justify-center px-6" data-purpose="main-content">
-<div class="max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<main class="flex-grow px-6 pb-16" data-purpose="main-content">
+<section class="max-w-4xl w-full mx-auto min-h-[65vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <!-- Visual Content Column -->
 <div class="relative order-2 lg:order-1" data-purpose="visual-graphic">
 <!-- Abstract Marketing Growth Graphic -->
@@ -106,7 +119,38 @@
 </div>
 <!-- END: Lead Generation Form -->
 </div>
+</section>
+<section class="max-w-7xl w-full mx-auto mt-16 space-y-12">
+<section aria-labelledby="about-heading" class="space-y-3 text-center" id="about">
+<h2 class="text-3xl md:text-4xl font-bold" id="about-heading">Growth-focused marketing for modern brands</h2>
+<p class="text-slate-400 max-w-3xl mx-auto">
+      Luitrix is a full-service marketing company helping brands scale visibility, leads, and revenue with measurable digital strategies.
+    </p>
+</section>
+<section aria-labelledby="services-heading" class="space-y-6" id="services">
+<h2 class="text-2xl md:text-3xl font-bold text-center" id="services-heading">Our Services</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<article class="glass-effect rounded-xl p-6 space-y-3">
+<h3 class="text-xl font-semibold">Influencer Marketing</h3>
+<p class="text-slate-300 text-sm leading-relaxed">Build high-trust campaigns with creator partnerships, niche audience targeting, and story-led content strategy.</p>
+</article>
+<article class="glass-effect rounded-xl p-6 space-y-3">
+<h3 class="text-xl font-semibold">Performance Marketing</h3>
+<p class="text-slate-300 text-sm leading-relaxed">Drive ROI through data-backed paid media across search, social, and retargeting with conversion-first optimization.</p>
+</article>
+<article class="glass-effect rounded-xl p-6 space-y-3">
+<h3 class="text-xl font-semibold">Website Development</h3>
+<p class="text-slate-300 text-sm leading-relaxed">Launch fast, responsive, and conversion-ready websites designed to elevate brand presence and customer experience.</p>
+</article>
 </div>
+</section>
+<section aria-labelledby="contact-heading" class="glass-effect rounded-2xl p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6" id="contact">
+<div class="space-y-2">
+<h2 class="text-2xl font-bold" id="contact-heading">Need a custom growth plan?</h2>
+<p class="text-slate-300">Tell us about your goals and we’ll craft a strategy aligned with your business stage and budget.</p>
+</div>
+<a class="inline-flex items-center justify-center bg-brand-accent hover:bg-brand-accent/90 text-white font-semibold px-6 py-3 rounded-lg focus:outline focus:outline-2 focus:outline-white focus:outline-offset-2 transition-colors" href="mailto:hello@luitrix.com">Contact Luitrix <span class="sr-only">Opens your email client</span></a>
+</section>
 </main>
 <!-- END: Main Content Section -->
 <!-- BEGIN: Footer -->
