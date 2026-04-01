@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luitrix | Elevate Your Digital Presence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#003da9",
+                        "surface-tint": "#b4c5ff",
+                        "on-tertiary-container": "#fff1ed",
+                        "secondary-container": "#2d458a",
+                        "background": "#131313",
+                        "primary-container": "#0f62fe",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed": "#390c00",
+                        "inverse-primary": "#0052dd",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#5d1900",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#353534",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#b4c5ff",
+                        "outline-variant": "#424656",
+                        "surface-container": "#201f1f",
+                        "primary-fixed": "#dbe1ff",
+                        "outline": "#8c90a2",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#c3c6d8",
+                        "tertiary-fixed": "#ffdbd0",
+                        "secondary": "#b4c5ff",
+                        "on-secondary": "#0e2b6f",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#2a4387",
+                        "tertiary-container": "#c84000",
+                        "on-primary-fixed": "#00174c",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-container": "#f3f3ff",
+                        "surface": "#131313",
+                        "surface-bright": "#393939",
+                        "on-primary": "#002979",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#832700",
+                        "tertiary": "#ffb59d",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-secondary-fixed": "#00174c",
+                        "on-secondary-container": "#a0b6ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(15, 98, 254, 0.15) 0%, rgba(19, 19, 19, 1) 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(180, 197, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<nav class="fixed top-0 left-0 w-full z-50">
+  
+  <div class="absolute top-0 left-0 w-full h-24 backdrop-blur-md pointer-events-none [mask-image:linear-gradient(to_bottom,black_85%,transparent)]"></div>
+
+  <div class="relative top-6 left-1/2 w-[95%] max-w-7xl -translate-x-1/2">
+    <div class="relative flex items-center justify-between bg-white/80 px-6 md:px-8 py-1 rounded-full h-14 shadow-sm border border-black/5">
+      
+      <div class="flex items-center h-full">
+        <img src="logo.png" alt="Luitrix Logo" class="h-14 w-auto object-contain" />
+      </div>
+
+      <ul class="hidden md:flex items-center space-x-6 text-sm font-semibold text-neutral-600">
+        <li><a href="#" class="bg-neutral-100 px-4 py-2 rounded-full text-neutral-900">Home</a></li>
+        <li><a href="#" class="hover:text-green-600 transition-colors">About Us</a></li>
+        <li><a href="#" class="hover:text-green-600 transition-colors">Services</a></li>
+        <li><a href="#" class="hover:text-green-600 transition-colors">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:block bg-[#005AE2] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-blue-700 transition-all">
+          Join as Creator
+        </a>
+
+        <button id="menu-btn" class="md:hidden group flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none">
+          <span class="block w-5 h-0.5 bg-neutral-800 transition-all duration-300 origin-center"></span>
+          <span class="block w-5 h-0.5 bg-neutral-800 transition-all duration-300"></span>
+          <span class="block w-5 h-0.5 bg-neutral-800 transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="absolute top-24 left-0 right-0 bg-white/95 backdrop-blur-md mx-auto w-[90%] rounded-2xl shadow-xl py-6 px-8 flex flex-col space-y-4 text-center border border-neutral-100 transform -translate-y-10 opacity-0 pointer-events-none transition-all duration-300 ease-in-out md:hidden">
+    <a href="#" class="text-neutral-900 font-bold py-2 border-b border-neutral-50">Home</a>
+    <a href="#" class="text-neutral-600 font-semibold py-2 border-b border-neutral-50 hover:text-green-600">About Us</a>
+    <a href="#" class="text-neutral-600 font-semibold py-2 border-b border-neutral-50 hover:text-green-600">Services</a>
+    <a href="#" class="text-neutral-600 font-semibold py-2 border-b border-neutral-50 hover:text-green-600">Contact</a>
+    <a href="#" class="sm:hidden bg-[#005AE2] text-white py-3 rounded-xl font-bold">Join as Creator</a>
+  </div>
+</nav>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const spans = menuBtn.querySelectorAll('span');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('opacity-0');
+    mobileMenu.classList.toggle('pointer-events-none');
+    mobileMenu.classList.toggle('translate-y-0');
+    mobileMenu.classList.toggle('-translate-y-10');
+
+    // Smaller "X" animation adjustments
+    spans[0].classList.toggle('rotate-45');
+    spans[0].classList.toggle('translate-y-1.5');
+    spans[1].classList.toggle('opacity-0');
+    spans[2].classList.toggle('-rotate-45');
+    spans[2].classList.toggle('-translate-y-1.5');
+  });
+</script>
+
+<main>
+  <section class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-40 overflow-hidden bg-black">
+  
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    
+    <img 
+      src="webdev.png" 
+      alt="Hero Background" 
+      class="w-full h-full object-cover"
+    />
+
+    <div class="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-black via-black/50 to-transparent z-20"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-8 w-full text-center relative z-30">
+    
+    <h1 class="font-headline font-extrabold text-6xl md:text-[9rem] tracking-tighter text-white leading-[0.85] drop-shadow-2xl mb-10">
+      Elevate Your <br/> 
+      <span class="text-blue-500">Digital Presence</span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-xl text-neutral-200 font-light leading-relaxed mb-12 drop-shadow-md">
+      We build high-performance marketing ecosystems that transform brands into market leaders. Architectural precision meets editorial creative.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <button class="px-10 py-5 bg-blue-600 text-white font-headline font-bold rounded-lg transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+        Launch Project
+      </button>
+      <button class="px-10 py-5 bg-transparent border border-white/40 text-white font-headline font-bold rounded-lg hover:bg-white/10 backdrop-blur-sm transition-all">
+        View Work
+      </button>
+    </div>
+  </div>
+
+</section>
+</main>
+ <!--OLD HRO-->
+
+<!-- Client Logos -->
+ <section class="bg-black text-white py-20 px-6 font-sans">
+  <div class="max-w-7xl mx-auto">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Our Brand Experience</h2>
+      <p class="text-lg md:text-xl text-neutral-300 font-light max-w-4xl mx-auto">
+        We've helped execute impactful influencer campaigns for some of India's top brands.
+      </p>
+    </div>
+<div class="flex flex-wrap justify-center gap-10 md:gap-20 mb-24 px-4">
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-4 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-xl">
+    <img src="LAKME.png" alt="Lakme" class="w-full h-auto object-contain" />
+  </div>
+
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-4 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-xl">
+    <img src="CASAGRAND.png" alt="Casagrand" class="w-full h-auto object-contain" />
+  </div>
+
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-4 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-xl">
+    <img src="APOLO.png" alt="Apollo Pharmacy" class="w-full h-auto object-contain" />
+  </div>
+
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-4 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-xl">
+    <img src="DMART.png" alt="DMart" class="w-full h-auto object-contain" />
+  </div>
+
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center p-4 shadow-sm transition-all duration-300 hover:scale-110 hover:shadow-xl">
+    <img src="SWIGGY.png" alt="Swiggy" class="w-full h-auto object-contain" />
+  </div>
+
+  <div class="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex flex-col items-center justify-center border-2 border-blue-600 transition-all duration-300 hover:scale-110 hover:bg-blue-50">
+    <span class="text-blue-600 font-bold text-sm tracking-tighter">+100</span>
+    <span class="text-blue-600 text-[10px] font-semibold uppercase tracking-tighter">Brands</span>
+  </div>
+</div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+      <div>
+        <p class="text-lg leading-relaxed text-neutral-300">
+          <span class="font-bold text-white">With deep expertise in influencer discovery,</span> negotiation, and campaign strategy, we've successfully contributed to campaigns for renowned names like 
+          <span class="font-bold text-white">Lakmé Salon, DMart, Apollo Pharmacy, Casagrand,</span> and <span class="font-bold text-white">Swiggy.</span>
+        </p>
+        <p class="mt-6 text-[#2563EB] font-bold">
+          +100 more brands — crafting stories that connect with real audiences.
+        </p>
+      </div>
+
+      <div class="border-l-2 border-blue-600 pl-6 py-2">
+        <p class="italic text-neutral-400 text-sm leading-relaxed">
+          "We bring the expertise of managing top brands into every campaign we build at Luitrix."
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <!--C2-->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<span class="text-primary font-semibold tracking-wider uppercase text-sm">What we do</span>
+<h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Core Expertise</h2>
+<p class="text-on-surface-variant max-w-2xl text-lg">We combine creative thinking with technical precision to deliver digital solutions that drive measurable business growth.</p>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto">
+<!-- Influencer Marketing - Restructured with Image Placeholder -->
+<div class="md:col-span-8 bg-surface-container rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row gap-8 relative overflow-hidden group border border-white/5">
+<div class="flex-1 flex flex-col justify-between relative z-10">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">groups</span>
+<h3 class="text-3xl font-bold mb-4 text-white">Influencer Marketing</h3>
+<p class="text-on-surface-variant max-w-md text-lg leading-relaxed">Connecting your brand with authentic voices that resonate with your target audience across all social platforms.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all group/link" href="#">
+                                See More <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] bg-white/5 rounded-3xl relative overflow-hidden flex items-center justify-center border border-white/5">
+<span class="material-symbols-outlined text-white/10 text-6xl">image</span>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-50"></div>
+</div>
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Performance Marketing - Tall Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-colors group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">trending_up</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Performance Marketing</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">Data-driven campaigns focused on ROI, from PPC to social ads, optimized for conversion.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all group/link" href="#">
+                            See More <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Web Development - Square Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-colors group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">code</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Web Development</h3>
+<p class="text-on-surface-variant text-base">Modern, responsive, and blazing-fast digital experiences built with the latest technologies.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all group/link" href="#">
+                            See More <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- SEO Excellence - Wide Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-colors group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">search</span>
+<h3 class="text-2xl font-bold mb-4 text-white">SEO Excellence</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">Comprehensive search strategies that boost visibility and organic traffic sustainably.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all group/link" href="#">
+                            See More <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Digital Marketing - Medium Card -->
+<div class="md:col-span-4 bg-surface-container rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-colors group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">ads_click</span>
+<h3 class="text-2xl font-bold mb-4 text-white">Digital Strategy</h3>
+<p class="text-on-surface-variant text-base leading-relaxed">Holistic digital roadmaps that align with your long-term business objectives and brand values.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all group/link" href="#">
+                            See More <span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Case Study (Luitrix Perspective Card Pattern) -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary mb-6 block">Selected Work</span>
+<h2 class="font-headline text-5xl font-black tracking-tighter text-on-surface mb-8">Fintech <span class="italic text-primary">Revolution</span></h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>We partnered with a global fintech startup to redefine their digital acquisition funnel. By merging architectural UX with aggressive performance marketing, we achieved a 300% growth in active users within 6 months.</p>
+<div class="p-6 bg-surface-container-low border-l-4 border-primary-container rounded-r-lg">
+<p class="text-primary italic font-medium">"Luitrix didn't just give us a strategy; they gave us a new trajectory for our entire business model."</p>
+<p class="mt-4 text-sm font-bold text-on-surface">— Sarah Jenkins, CEO of NexaPay</p>
+</div>
+</div>
+<button class="mt-12 group flex items-center gap-3 font-headline font-bold text-primary">
+                            Explore Case Study 
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+<div class="flex-1 w-full aspect-video md:aspect-[4/5] bg-surface-container-high rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern abstract digital interface with sleek banking charts and financial data visualized in bright blue on a dark screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC3cTQFCmxXuWCd2ONbP8C863ZrW5eMaus17F34bgY-y88auT7WEVNoxNxJKrvMe_wz0BUvrFC_IvEsIGohXDvPvcI86MtU_VuMwHiQf1FIEmQ46JB66_xG-w6Fl3xCZXmDsr6j-RjlfiKt5dsWjFoj-zh8Jzijwbf7R-SLlQiE9P9fc5-HEakL8GU-9sqdde_4b7Kj7IXvq3wqM1nS7po-A7XGPYbosuJxxdSGo9e3CS8LaVpC1OzkTUxKIP1o7Tw7vsisbiJEjov"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-24 bg-background">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<div class="text-5xl font-black font-headline text-primary tracking-tighter">50000+</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Creators Onboard</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black font-headline text-primary tracking-tighter">100+</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Campaigns Launched</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black font-headline text-primary tracking-tighter">98%</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Client Retention</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl font-black font-headline text-primary tracking-tighter">12</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Industry Awards</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-primary-container relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<img class="w-full h-full object-cover" data-alt="Digital network mesh of lines and dots representing global connectivity in a deep blue space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz4dOUlacrwaGNztLOdFfqHw17xNS-KWZ0R5ez3Ia--Ol0r6mZCZVQErXfm2mj7AzJG8P4zAqFfvs6sDdbXDHVsNFSP0HKY5EthgV7NsW9kSiFOrWm_nSgbSndfagCJlVwKajJ9VHdCM2yo_esMMgCzjws_9TSLaaDBMFUNzef9hUDiw5bhZrg5VXsZbZX4Hn_0HmyW764rVcR5VM648PNJjDaAWx9yUjJtuVyAxLMz95Rf9pBy_4X--g5MrZ8kCCGNEs0g4V4nKFx"/>
+</div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<h2 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-primary-container mb-8 leading-tight">Ready to break the <br/> digital ceiling?</h2>
+<button class="px-12 py-5 bg-on-primary-container text-primary-container font-headline font-black text-xl rounded-lg hover:scale-105 transition-transform shadow-xl">
+                    Start Your Project
+                </button>
+</div>
+</section>
+</main>
+<!--FAQ-->
+
+<footer class="bg-neutral-950 w-full border-t border-neutral-800/40 bg-neutral-900/20">
+  <div class="max-w-7xl mx-auto px-8 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
+      
+      <div class="flex flex-col">
+        <div class="text-base font-black text-white font-headline mb-4 tracking-tight">Luitrix</div>
+        <div class="text-neutral-500 font-inter text-xs leading-relaxed space-y-1">
+          <p>Email: Contact@luitrix.com</p>
+          <p>Contact No: 9620240696</p>
+          <div class="pt-2">
+            <span class="font-bold text-white block mb-1">Registered Address:</span> 
+            <p>WeWork Vaishnavi Signature</p>
+            <p>East Ground Floor, 78/9, Outer Ring Road, Hobli,</p>
+            <p>Bellandur, Varthur, Bengaluru, Karnataka 560103</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-white font-bold text-sm tracking-tight mb-4">Services</h4>
+        <nav class="flex flex-col gap-3">
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Influencer Marketing</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Performance Marketing</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Web Development</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">SEO</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Digital Marketing</a>
+        </nav>
+      </div>
+
+      <div class="flex flex-col">
+        <h4 class="text-white font-bold text-sm tracking-tight mb-4">Company</h4>
+        <nav class="flex flex-col gap-3">
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">About Us</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Privacy Policy</a>
+          <a href="#" class="text-neutral-400 hover:text-white transition-colors text-xs">Terms of Service</a>
+        </nav>
+      </div>
+<div class="flex flex-col">
+  <h4 class="text-white font-bold text-sm tracking-tight mb-4">Connect with us</h4>
+  <div class="flex items-center gap-3">
+    <a href="#" class="group flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 transition-all hover:bg-[#E4405F]/10 hover:border-[#E4405F]/30">
+      <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#E4405F]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+
+    <a href="#" class="group flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 transition-all hover:bg-[#1877F2]/10 hover:border-[#1877F2]/30">
+      <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+
+    <a href="#" class="group flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 transition-all hover:bg-[#25D366]/10 hover:border-[#25D366]/30">
+      <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <a href="#" class="group flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 transition-all hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/30">
+      <svg class="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+    </a>
+
+    
+  </div>
+</div>
+    </div>
+
+    <div class="pt-6 border-t border-neutral-800/30">
+      <p class="text-neutral-600 text-[10px] tracking-tight">© 2026 Luitrix Agency. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body></html>
